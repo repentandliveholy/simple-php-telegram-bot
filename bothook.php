@@ -57,7 +57,7 @@ $alias = [
 	'disk'=>'server',
 ];
 
-$args = explode('  ', trim($message));
+$args = explode(' ', trim($message));
 
 $command = ltrim(array_shift($args), '/');
 $method = '';
