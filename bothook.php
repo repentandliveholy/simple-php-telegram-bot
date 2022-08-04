@@ -1,3 +1,21 @@
 <?php
+  
+  function sendMessage($chatID, $messaggio, $token) {
+    echo "sending message to " . $chatID . "\n";
 
-echo "hello world";
+    $url = "https://api.telegram.org/bot" . $token . "/sendMessage?chat_id=" . $chatID;
+    $url = $url . "&text=" . urlencode($messaggio);
+    $ch = curl_init();
+    $optArray = array(
+            CURLOPT_URL => $url,
+            CURLOPT_RETURNTRANSFER => true
+    );
+    curl_setopt_array($ch, $optArray);
+    $result = curl_exec($ch);
+    curl_close($ch);
+    return $result;
+}
+
+$token = "5593225545:AAHSNspTaPCqZvQvumMgXikWhakgjdBPoeg";
+$chatid = "<chatID>";
+sendMessage($chatid, "Hello World", $token);
