@@ -130,7 +130,7 @@ function processMessage($message) {
         'keyboard' => array(array('Hello', 'Hi', 'Good day')),
         'one_time_keyboard' => true,
         'resize_keyboard' => true)));
-    } else if ($text === "Hello" || $text === "Hi") {
+    } else if ($text === "Hello" || $text === "Hi" || $text === "Good day") {
       apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => 'Nice to meet you'));
     } else if (strpos($text, "/stop") === 0) {
       // stop now
