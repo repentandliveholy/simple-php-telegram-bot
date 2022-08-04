@@ -163,3 +163,8 @@ if (!$update) {
 if (isset($update["message"])) {
   processMessage($update["message"]);
 }
+
+$bot->command('new', function ($message) use ($bot) {
+    $answer = 'Howdy! Welcome to the stopwatch. Use bot commands or keyboard to control your time.';
+    $bot->sendMessage($message->getChat()->getId(), $answer);
+});
