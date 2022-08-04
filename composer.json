@@ -1,5 +1,8 @@
 {
     "require-dev": {
         "heroku/heroku-buildpack-php": "^222.0"
+    },
+    "require": {
+        "longman/telegram-bot": "^0.78.0"
     }
 }
