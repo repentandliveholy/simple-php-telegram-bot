@@ -17,5 +17,5 @@
 }
 
 $token = "5593225545:AAHSNspTaPCqZvQvumMgXikWhakgjdBPoeg";
-$chatid = "<chatID>";
+$chatid = "<5593225545>";
 sendMessage($chatid, "Hello World", $token);
