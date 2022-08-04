@@ -163,16 +163,3 @@ if (!$update) {
 if (isset($update["message"])) {
   processMessage($update["message"]);
 }
-
-
-
-
-// create a bot
-$bot = new \TelegramBot\Api\Client('bot_token', 'botanio_token');
-// run, bot, run!
-$bot->run();
-
-$bot->command('new', function ($message) use ($bot) {
-    $answer = 'Howdy! Welcome to the stopwatch. Use bot commands or keyboard to control your time.';
-    $bot->sendMessage($message->getChat()->getId(), $answer);
-});
